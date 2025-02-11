@@ -9,5 +9,5 @@ if __name__ == "__main__":
     root.config(bg="black")
     root.iconbitmap()
     app = UI(root)
-    app.add_to_calculation(100)
     root.mainloop()
+    # add a comment
