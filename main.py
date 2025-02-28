@@ -10,4 +10,3 @@ if __name__ == "__main__":
     root.iconbitmap()
     app = UI(root)
     root.mainloop()
-    # add a comment

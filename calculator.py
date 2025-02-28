@@ -47,7 +47,7 @@ class Calculator:
         self.logger = logging.getLogger(__name__)
 
     def _handle_keypress(self):
-        self.root.bind("<Key-Escape>",lambda event: self.root.destroy())
+        self.root.bind("<Key-Escape>",lambda event: self.exit())
         self.root.bind("<c>", lambda event: self.clear_field())
 
     def update_display(self):
@@ -184,3 +184,7 @@ class Calculator:
         self.operation = None
         self.used_constants.clear()
         self.update_display()
+    
+    def exit(self):
+        messagebox.askyesno("Exit", "Are you sure you want to exit?", command=self.root.destroy)
+        self.root.destroy()
